@@ -5,7 +5,7 @@
 # Если на четном - оставить без изменения.
 # Задание сделать с использованием enumerate или range.
 # my_list = ['bubbles', 'qwe', 'letters']
-# my_list_2=[]
+# my_list_2= []
 # for index,letter in enumerate(my_list):
 #     if index%2!=0:
 #         my_list_2.append(letter[::-1])
@@ -22,8 +22,11 @@
 # 3. Дан список строк my_list. Создать новый список в который поместить
 # элементы из my_list в которых есть символ - буква "a" на любом месте.
 # my_list = ['always', 'angry', 'fabulous','tomorrow','apple']
-# my_list_2 = [my_list_2 for my_list_2 in my_list if "a" in my_list_2]
-# print(my_list_2)
+# my_new_list = []
+# for letter in my_list:
+#     if letter.count('a') > 0:
+#         my_new_list.append(letter)
+# print(my_new_list)
 ##################################################################
 # 4. Дан список my_list в котором могут быть как строки (type str)
 # так и целые числа (type int).
@@ -35,13 +38,16 @@
 # 5. Дана строка my_str. Создать список в который поместить те символы из my_str,
 # которые встречаются в строке только один раз.
 # my_str = 'qqwweeerty'
-# my_new_str= [letter for letter in my_str if my_str.count(letter) == 1]
+# my_new_str = []
+# for symbol in set(my_str):
+#     if my_str.count(symbol) == 1:
+#         my_new_str.append(symbol)
 # print(my_new_str)
 ####################################################################
 # 6. Даны две строки. Создать список в который поместить те символы,
 # которые есть в обеих строках хотя бы раз.
-# my_list=['qwe', '2', 'wasd']
-# my_list_2=[245678, 'qwe','wasd', 'alpha']
+# my_list= ['qwe', '2', 'wasd']
+# my_list_2= [245678, 'qwe','wasd', 'alpha']
 # my_new_list= list(set(my_list) & set(my_list_2))
 # print(my_new_list)
 ##################################################################
@@ -49,8 +55,13 @@
 # которые есть в обеих строках,
 # но в каждой только по одному разу.
 # my_list = ['qwe', '2', 'wasd']
-# my_list_2 = [245678, 'qwe','wasd','alpha']
-# print(list(set(my_list).intersection(my_list_2)))
+# my_list_2 = [245678, '2', 'qwe','wasd', 'wasd', 'alpha']
+# my_new_list= list(set(my_list).intersection(set(my_list_2)))
+# result = []
+# for symbol in my_new_list:
+#     if my_list.count(symbol) == 1 and my_list_2.count(symbol) == 1:
+#         result.append(symbol)
+# print(result)
 ########################################################################
 # 8. Описать с помощью словаря следующую структуру для конкретного человека (можно придумать):
 # Фамилия

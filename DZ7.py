@@ -58,6 +58,7 @@
 # #в)
 # first_dict = {key: value for key, value in my_dict_1.items() if key in first_keys}
 # print(first_dict)
+#
 # # г)
 # res_dict = {**my_dict_1, **my_dict_2}
 # for key in common_keys:
